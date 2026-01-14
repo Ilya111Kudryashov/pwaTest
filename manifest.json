@@ -1,0 +1,209 @@
+{
+    "name": "PWA CRM",
+    "short_name": "CRM PWA",
+    "description": "Прогрессивное веб-приложение для управления проектами и задачами с авторизацией пользователей",
+    "start_url": "/auth.html",
+    "display": "standalone",
+    "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#4a90e2",
+    "categories": ["business", "productivity", "utilities"],
+    "lang": "ru-RU",
+    "dir": "ltr",
+    
+    "icons": [
+        {
+            "src": "icons/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    
+    "screenshots": [
+        {
+            "src": "screenshots/mobile-1.png",
+            "sizes": "360x640",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Страница входа"
+        },
+        {
+            "src": "screenshots/mobile-2.png",
+            "sizes": "360x640",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Дашборд"
+        },
+        {
+            "src": "screenshots/desktop-1.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Главная страница"
+        }
+    ],
+    
+    "shortcuts": [
+        {
+            "name": "Дашборд",
+            "short_name": "Dashboard",
+            "description": "Перейти к дашборду",
+            "url": "/dashboard.html",
+            "icons": [
+                {
+                    "src": "icons/shortcut-dashboard-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Новая задача",
+            "short_name": "Новая задача",
+            "description": "Создать новую задачу",
+            "url": "/new-task.html",
+            "icons": [
+                {
+                    "src": "icons/shortcut-task-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Статистика",
+            "short_name": "Статистика",
+            "description": "Просмотреть статистику",
+            "url": "/statistics.html",
+            "icons": [
+                {
+                    "src": "icons/shortcut-stats-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    
+    "related_applications": [
+        {
+            "platform": "webapp",
+            "url": "https://your-domain.com/manifest.json"
+        }
+    ],
+    
+    "prefer_related_applications": false,
+    
+    "scope": "/",
+    
+    "launch_handler": {
+        "client_mode": ["auto", "focus-existing", "navigate-existing"]
+    },
+    
+    "edge_side_panel": {
+        "preferred_width": 360
+    },
+    
+    "handle_links": "preferred",
+    
+    "protocol_handlers": [
+        {
+            "protocol": "web+pwacrm",
+            "url": "/?protocol=%s"
+        }
+    ],
+    
+    "share_target": {
+        "action": "/share-target.html",
+        "method": "POST",
+        "enctype": "multipart/form-data",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url",
+            "files": [
+                {
+                    "name": "files",
+                    "accept": ["image/*", "application/pdf", "text/plain"]
+                }
+            ]
+        }
+    },
+    
+    "file_handlers": [
+        {
+            "action": "/file-handler.html",
+            "accept": {
+                "application/pdf": [".pdf"],
+                "image/*": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
+                "text/plain": [".txt"]
+            }
+        }
+    ],
+    
+    "capture_links": "new-client",
+    
+    "permissions": [
+        "clipboard-write",
+        "clipboard-read",
+        "notifications",
+        "geolocation"
+    ],
+    
+    "id": "/",
+    
+    "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+    
+    "features": [
+        "Cross Platform",
+        "fast",
+        "simple",
+        "secure"
+    ],
+    
+    "splash_pages": null
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA CRM - Вход</title>
+    <meta name="description" content="PWA CRM система с авторизацией">
+    <meta name="theme-color" content="#4a90e2">
+    
+    <!-- PWA мета-теги -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PWA CRM">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/icon-72x72.png">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a href="./auth.html">
+
+                    <h1>PWA</h1>
+                </a>
+                
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="user@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                    <div class="password-toggle">
+                        <input type="checkbox" id="showPassword">
+                        <label for="showPassword">Показать пароль</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="rememberMe">
+                        Запомнить меня
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span id="loginText">Войти</span>
+                    <span id="loginLoading" class="hidden">Вход...</span>
+                </button>
+                
+                <div class="auth-links">
+                    <a href="register.html" class="auth-link">Регистрация</a>
+                    <a href="#" id="forgotPassword" class="auth-link">Забыли пароль?</a>
+                </div>
+            </form>
+            
+            <div class="auth-divider">
+                <span>или войдите через</span>
+            </div>
+            
+            <div class="social-auth">
+                <button class="btn-social google">
+                    <span>Google</span>
+                </button>
+                <button class="btn-social github">
+                    <span>GitHub</span>
+                </button>
+            </div>
+            
+            <div class="auth-footer">
+                <p>Установите приложение для лучшего опыта</p>
+                <button id="installBtn" class="btn btn-outline btn-block hidden">
+                    📱 Установить PWA
+                </button>
+            </div>
+        </div>
+        
+        <div class="system-info">
+            <div class="info-card">
+                <h3>📊 Статус системы</h3>
+                <p id="connectionStatus">● Проверка соединения...</p>
+                <p id="appStatus">Загрузка приложения...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Уведомления -->
+    <div id="notification" class="notification hidden"></div>
+    
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

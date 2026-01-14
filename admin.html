@@ -1,0 +1,48 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - PWA CRM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <!-- Такая же структура как в dashboard -->
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>⚙️ Админ-панель</h1>
+                <button onclick="window.history.back()" class="btn btn-outline">
+                    ← Назад
+                </button>
+            </header>
+            
+            <div class="content-area">
+                <div class="admin-tabs">
+                    <button class="tab-btn active" onclick="showTab('users')">👥 Пользователи</button>
+                    <button class="tab-btn" onclick="showTab('roles')">🎭 Роли</button>
+                    <button class="tab-btn" onclick="showTab('logs')">📋 Логи</button>
+                    <button class="tab-btn" onclick="showTab('settings')">⚙️ Настройки</button>
+                </div>
+                
+                <div id="usersTab" class="tab-content active">
+                    <h2>Управление пользователями</h2>
+                    <div id="usersList" class="users-list">
+                        <!-- Список пользователей -->
+                    </div>
+                </div>
+                
+                <!-- Остальные вкладки -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
